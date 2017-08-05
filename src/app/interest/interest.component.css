@@ -1,5 +1,5 @@
 .interest {
-    background-color: #bbb;
+    background-color: #555;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -9,7 +9,7 @@
 }
 
 .interest:hover {
-    background-color: #ddd;
+    background-color: #666;
 }
 
 .icon-box {

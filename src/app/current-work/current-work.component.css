@@ -1,0 +1,14 @@
+.border-left {
+    border-left: 1px solid #555;
+}
+
+.subcategory {
+    font-variant: small-caps;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtext {
+    font-size: 14px;
+    margin-top: -10px;
+}
