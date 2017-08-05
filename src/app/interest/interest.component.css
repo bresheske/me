@@ -1,0 +1,22 @@
+.interest {
+    background-color: #bbb;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.interest:hover {
+    background-color: #ddd;
+}
+
+.icon-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 999px;
+    background-color: #444;
+    color: #aaa;
+    display: inline-block;
+}
