@@ -10,8 +10,7 @@ export class CurrentWorkComponent {
   constructor() { }
 
   ngAfterViewInit() {
-    console.log("CurrentWork: Init.");
-    Reveal.reveal('div', 30);
+    Reveal.reveal('div.row', 20);
   }
 
 }

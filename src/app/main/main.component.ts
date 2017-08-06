@@ -13,7 +13,7 @@ export class MainComponent {
 
   ngAfterViewInit() {
     console.log("Main: Init.");
-    Reveal.reveal('div', 30);
+    Reveal.reveal('div.row', 20);
   }
 
 }

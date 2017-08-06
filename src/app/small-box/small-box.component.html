@@ -1,0 +1,14 @@
+<div class="col-sm-{{size}} smallbox {{ icon?'icon':'' }}" (click)="click()">
+  <div class="row">
+    <div class="col-xs-2">
+      <p *ngIf="index" class="highlight index">{{index}}</p>
+      <p *ngIf="icon" class="highlight icon">
+        <i class="fa {{icon}} fa-2x"></i>
+      </p>
+    </div>
+    <div class="col-xs-10">
+      <p class="header">{{header}}</p>
+      <p class="text">{{text}}</p>
+    </div>
+  </div>
+</div>

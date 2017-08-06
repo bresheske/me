@@ -1,0 +1,22 @@
+.text {
+    font-size: 14px;
+}
+
+.header, .index {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.smallbox.icon {
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.smallbox.icon:hover {
+    background-color: #444;
+}
+
+p.icon {
+    text-align: center;
+}

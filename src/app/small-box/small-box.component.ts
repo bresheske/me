@@ -2,14 +2,17 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-interest',
-  templateUrl: './interest.component.html',
-  styleUrls: ['./interest.component.css']
+  selector: 'app-small-box',
+  templateUrl: './small-box.component.html',
+  styleUrls: ['./small-box.component.css']
 })
-export class InterestComponent implements OnInit {
+export class SmallBoxComponent implements OnInit {
+  @Input() public index:string;
   @Input() public text:string;
+  @Input() public header:string;
   @Input() public icon:string;
   @Input() public link:string;
+  @Input() public size:string = "4";
 
   private router:Router;
 
@@ -21,7 +24,7 @@ export class InterestComponent implements OnInit {
   }
 
   click() {
-    if (!this.link)
+    if (!this.icon)
       return;
 
     this.router.navigateByUrl(this.link);
