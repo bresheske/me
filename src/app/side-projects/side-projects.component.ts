@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+declare var Reveal;
 
 @Component({
   selector: 'app-side-projects',
   templateUrl: './side-projects.component.html',
   styleUrls: ['./side-projects.component.css']
 })
-export class SideProjectsComponent implements OnInit {
+export class SideProjectsComponent {
+
+  private breadcrumbs:Array<any> = [
+    { name: 'home', link: '/main' },
+    { name: 'side projects' },
+  ];
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    Reveal.reveal('div.row', 20);
   }
 
 }

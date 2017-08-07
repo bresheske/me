@@ -18,3 +18,30 @@ h1,h2,h3,h4 {
 .highlight {
     color: #e8f542;
 }
+
+a {
+    color: #e8f542;
+}
+
+a:visited {
+    color: #e8f542;
+}
+
+a:hover {
+    color: #e8f542;
+}
+
+.subcategory {
+    font-variant: small-caps;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtext {
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.border-left {
+    border-left: 1px solid #555;
+}

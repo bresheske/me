@@ -7,13 +7,13 @@
     font-weight: bold;
 }
 
-.smallbox.icon {
+.smallbox.link {
     border-radius: 5px;
     cursor: pointer;
     padding-top: 5px;
 }
 
-.smallbox.icon:hover {
+.smallbox.link:hover {
     background-color: #444;
 }
 

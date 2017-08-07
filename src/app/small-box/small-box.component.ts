@@ -11,7 +11,9 @@ export class SmallBoxComponent implements OnInit {
   @Input() public text:string;
   @Input() public header:string;
   @Input() public icon:string;
+  @Input() public iconlink:string;
   @Input() public link:string;
+  @Input() public target:string;
   @Input() public size:string = "4";
 
   private router:Router;
