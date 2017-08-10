@@ -8,7 +8,7 @@ declare var Reveal;
 })
 export class SideProjectsComponent {
 
-  private breadcrumbs:Array<any> = [
+  public breadcrumbs:Array<any> = [
     { name: 'home', link: '/main' },
     { name: 'side projects' },
   ];

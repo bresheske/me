@@ -6,7 +6,7 @@ declare var Reveal;
   styleUrls: ['./current-work.component.css']
 })
 export class CurrentWorkComponent {
-  private breadcrumbs:Array<any> = [
+  public breadcrumbs:Array<any> = [
     { name: 'home', link: '/main' },
     { name: 'current work' },
   ];
