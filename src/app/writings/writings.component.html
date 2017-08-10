@@ -1,3 +1,27 @@
-<p>
-  writings works!
-</p>
+<div class="row">
+    <app-breadcrumb [crumbs]="breadcrumbs"></app-breadcrumb>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>writings</h1>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-2">
+        <p class="subcategory highlight">angular</p>
+        <p class="subtext">some serious improvements on webdev</p>
+    </div>
+    <div class="col-sm-10 border-left">
+        <div class="row">
+            <app-small-box 
+              icon="fa-code-fork" 
+              size="6"
+              link="/writings/angularrouteanimation"
+              target="_blank" 
+              header="Angular Route Animation Made Easy" 
+              text="There's a few ways to get angular routing animation working, but I found a really simple approach.">
+            </app-small-box>
+        </div>
+    </div>
+</div>

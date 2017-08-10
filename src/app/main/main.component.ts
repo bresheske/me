@@ -12,7 +12,6 @@ export class MainComponent {
   }
 
   ngAfterViewInit() {
-    console.log("Main: Init.");
     Reveal.reveal('div.row', 20);
   }
 

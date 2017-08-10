@@ -13,6 +13,7 @@ import { SideProjectsComponent } from './side-projects/side-projects.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { AddressBoxComponent } from './address-box/address-box.component';
 import { SmallHeaderBoxComponent } from './small-header-box/small-header-box.component';
+import { WritingAngularAnimationsComponent } from './writing-angular-animations/writing-angular-animations.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'education', component: EducationComponent },
   { path: 'writings', component: WritingsComponent },
   { path: 'side-projects', component: SideProjectsComponent },
+  { path: 'writings/angularrouteanimation', component: WritingAngularAnimationsComponent },
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     SideProjectsComponent,
     BreadcrumbComponent,
     AddressBoxComponent,
-    SmallHeaderBoxComponent
+    SmallHeaderBoxComponent,
+    WritingAngularAnimationsComponent
   ],
   imports: [
     BrowserAnimationsModule,
