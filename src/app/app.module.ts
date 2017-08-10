@@ -11,6 +11,8 @@ import { WritingsComponent } from './writings/writings.component';
 import { SmallBoxComponent } from './small-box/small-box.component';
 import { SideProjectsComponent } from './side-projects/side-projects.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { AddressBoxComponent } from './address-box/address-box.component';
+import { SmallHeaderBoxComponent } from './small-header-box/small-header-box.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -30,7 +32,9 @@ const appRoutes: Routes = [
     WritingsComponent,
     SmallBoxComponent,
     SideProjectsComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    AddressBoxComponent,
+    SmallHeaderBoxComponent
   ],
   imports: [
     BrowserAnimationsModule,
