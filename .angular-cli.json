@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "../bresheske.github.io/",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"

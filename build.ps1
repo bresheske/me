@@ -1,6 +1,6 @@
 ng build --prod
-copy-item "..\bresheske.github.io\index.html" -destination "..\bresheske.github.io\404.html"
-set-location "..\bresheske.github.io"
+copy-item "dist\index.html" -destination "dist\404.html"
+set-location "dist"
 git init
 git remote add origin https://github.com/bresheske/bresheske.github.io.git
 git add -A

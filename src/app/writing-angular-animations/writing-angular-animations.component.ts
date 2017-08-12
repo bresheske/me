@@ -15,7 +15,7 @@ export class WritingAngularAnimationsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    Reveal.reveal('div.row', 20);
+    Reveal.reveal('h1,h3,p,pre', 20);
   }
 
 }
