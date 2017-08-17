@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from "../globals";
 declare var Reveal;
 
 @Component({
@@ -12,7 +13,7 @@ export class MainComponent {
   }
 
   ngAfterViewInit() {
-    Reveal.reveal('div.row', 20);
+    Reveal.reveal('div.row', Globals.AnimationDuration);
   }
 
 }

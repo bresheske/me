@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../globals';
 declare var Reveal;
 @Component({
   selector: 'app-writing-angular-animations',
@@ -15,7 +16,7 @@ export class WritingAngularAnimationsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    Reveal.reveal('h1,h3,p,pre', 20);
+    Reveal.reveal('h1,h3,p,pre', Globals.AnimationDuration);
   }
 
 }

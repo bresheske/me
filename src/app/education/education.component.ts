@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from "../globals";
 declare var Reveal;
 @Component({
   selector: 'app-education',
@@ -14,7 +15,7 @@ export class EducationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    Reveal.reveal('div.row', 20);
+    Reveal.reveal('div.row', Globals.AnimationDuration);
   }
 
 }
