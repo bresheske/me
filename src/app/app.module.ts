@@ -14,6 +14,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { AddressBoxComponent } from './address-box/address-box.component';
 import { SmallHeaderBoxComponent } from './small-header-box/small-header-box.component';
 import { WritingAngularAnimationsComponent } from './writing-angular-animations/writing-angular-animations.component';
+import { WritingAgileComponent } from './writing-agile/writing-agile.component';
+import { WritingRoutingGithubPagesComponent } from './writing-routing-github-pages/writing-routing-github-pages.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -22,7 +24,9 @@ const appRoutes: Routes = [
   { path: 'education', component: EducationComponent },
   { path: 'writings', component: WritingsComponent },
   { path: 'side-projects', component: SideProjectsComponent },
-  { path: 'writings/angularrouteanimation', component: WritingAngularAnimationsComponent },
+  { path: 'writings/angular-route-animation', component: WritingAngularAnimationsComponent },
+  { path: 'writings/agile-thoughts', component: WritingAgileComponent },
+  { path: 'writings/angular-routing-github-pages', component: WritingRoutingGithubPagesComponent }
 ];
 
 @NgModule({
@@ -37,7 +41,9 @@ const appRoutes: Routes = [
     BreadcrumbComponent,
     AddressBoxComponent,
     SmallHeaderBoxComponent,
-    WritingAngularAnimationsComponent
+    WritingAngularAnimationsComponent,
+    WritingAgileComponent,
+    WritingRoutingGithubPagesComponent
   ],
   imports: [
     BrowserAnimationsModule,

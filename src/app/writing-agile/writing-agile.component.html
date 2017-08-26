@@ -1,0 +1,146 @@
+<div class="row">
+    <app-breadcrumb [crumbs]="breadcrumbs"></app-breadcrumb>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>some thoughts on the agile methodology</h1>
+        <p><strong>August 16th, 2017</strong></p>
+    </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-12">
+    <p>Agile is the new up-and-already-coming thing in software development. Everyone at the very least claims to do agile or scrum, but everyone does it differently. There is no one-size fits all management style, and agile aims at letting teams figure out what works for them.</p>
+    <p>But it's not the end-all-be-all of development. Managers hear agile just solves all problems and that could not be more untrue. It just aims at doing things different than the previous common waterfall approach.</p>
+    
+    <h3>first up - let us bust some myths about agile</h3>
+    <ul>
+      <li>
+        <strong>Agile does not mean faster feature production.</strong>
+        <p>First off, just because a developer now works in a new paradigm does not mean that fingers will produce faster lines of code. I don't think anyone would argue against that point. Additionally, agile 
+      aims to create self-managing teams. Meaning: some of the responsibilities of a typical development manager are now shifted onto the team member's shoulders. One could make the argument that a transitioning
+      team would likely slow down code production due to additional responsibilities elsewhere.</p>
+      </li>
+      <li>
+        <strong>Agile does not necessarily mean more releases.</strong>
+        <p>Releases, and their frequencies, in my opinion are largely dependent on the confidence of quality of the product and the cost associated. You don't actually need agile to be able to release more often, you just need confidence that the 
+      release contains a low bug count and doesn't cost an entire sprint worth of regression effort. One huge way to accomplish this is to maintain a suite of fully automated test cases that run nightly and buildy. Furthermore developers want to 
+      develop, not manually test. So creating automated test code actually maintains engineering sanity on the side.</p>
+      </li>
+      <li>
+        <strong>Agile does not mean less bugs or higher quality.</strong>
+        <p>One thing that my organization and Microsoft <em>had</em> in common is 2 week sprints. Microsoft felt this was simply too short, and they were pushing out buggy code. Why would this happen? Well, I think there's a lot to be said about end-of-sprint
+      compromises so we can deliver on our commitments. One compromise is simply code reviews. As time becomes less and less of a commodity near the end, reviewers really just want to get the code in and tested, regardless of the <a href="http://www.osnews.com/story/19266/WTFs_m" target="_blank">readability</a>. This applies
+      to bugs too. As engineers or even quality assurance members become more stressed, they allow more features through and create bugs in the backlog for future work. Again, this can be fixed by a suite of end-to-end tests like mentioned above.
+        </p>
+      </li>
+      <li>
+        <strong>Agile does not mean lower costs.</strong>
+        <p>Costs include money, engineering resources (people), engineering sanity and burnout levels, and so much more. I hit on all of these above, but again releases will be extremely expensive if a full regression test is required at every step.</p>
+      </li>
+    </ul>
+    <p>Furthermore, it is highly likely that a team transitioning to agile will produce less features, more bugs, push release dates, and produce higher cost of deliverables.
+      At VSLive 2017 I asked a few project managers from Microsoft, on average, how often do their agile teams hit 100% of their commitments. Their answer was a swift giggle followed by
+      'Never', later going on to explain how many serious bugs they pushed out to production the first few sprints they attempted agile.
+    </p>
+
+    <h3>we get it, agile sucks. so why are people using it so much?</h3>
+    <p>Hold on there sparky. Agile, actually, does not suck. It's just different, and it requires some serious cultivation. The above was to make clear that the current stigma surrounding agile magicially fixing everything is pretty much bull.</p>
+    <p>Lets take a minute to identify some of the changes that a transitioning team will go through, in a mediocure effort to identify what agile really is.</p>
+    <ul>
+      <li>
+        <strong>Milestones are now measured in weeks instead of months.</strong>
+        <p>And that brings some significant advantages, like simply being able to reliably predict release dates. However this can frighten a team who knows just how much effort a release actually requires.</p>
+      </li>
+      <li>
+        <strong>Individuals do not produce features; teams do.</strong>
+        <p>So this means that the team succeeds and fails together. Some of the better-producing engineers will have to pick up the slack of the lower-producing ones, and new team members can rely on other teammates as needed.
+          Also engineers can't just blindly pick another fun feature to work on when the rest of the team needs to finish their original commitments.
+        </p>
+      </li>
+      <li>
+        <strong>Individuals are not responsible for the quality of the product; the teams are.</strong>
+        <p>This means team members need to be on the same page for code reviews and testability.</p>
+      </li>
+      <li>
+        <strong>Managers are not responsible for the velocity of feature development; the teams are.</strong>
+        <p>The teams are in charge of stating "we'll get this much done over the next 3 weeks". So this means managers are now responsible for pushing teams to make good decisions, rather than making those decisions for them.</p>
+      </li>
+      <li>
+        <strong>Managers are not responsible for creating or adjusting workflow; the teams are.</strong>
+        <p>Teams must identify points of improvement and act on them.</p>
+      </li>
+    </ul>
+    <p>You probably noticed a pattern. Teams are now responsible for: </p>
+    <ul>
+      <li>the amount of product features that are developed in a given timeframe</li>
+      <li>the amount of bugs produced from the development of new features</li>
+      <li>how many hours are put into feature work</li>
+      <li>the monitorization of their own sanity and burnout levels</li>
+      <li>identifying weak points, and people, within the team</li>
+      <li>making the call when a feature or release is ready</li>
+      <li>identifying technical debt and prioritizing the work</li>
+      <li>making adjustments in an effort to better the team's performance</li>
+    </ul>
+    <p>So it seems the teams are now responsible for managing themselves. The agile manifesto actually states <em>"the best architecture, requirements, and designs emerge from self-organizing teams"</em>. What do managers actually do? Do we need them anymore? Well, I'm not a manager, so I'm sure I'll miss a few things, but please let me make this next point perfectly clear.</p>
+    <h3>agile produces self-managing teams that require <em>great</em> management.</h3>
+    <p>An agile team manager is responsible for listening to individuals, attending to their needs, and acting quickly. They are really there to serve the team, not micromanage it.</p>
+    <p>But in a typical corporate hierarchy, the manager is literally the boss of the team. Part of being a great agile team lead is to know your role in the agile world, and the role all other players.</p>
+    <p><strong>lets talk about assholes</strong></p>
+    <p>Yup, assholes. I attended the heartland developers conference in Omaha in 2016, and a wonderful speaker named <a href="http://tarah.org/" target="_blank">Tarah Wheeler</a>, who happens to be an expert in the field of software engineering management, defined an asshole.
+    </p>
+    <ul>
+      <li>An asshole is someone who routinely bugs other people to the point where productivity is stifled.</li>
+      <li>An asshole is someone who wastes time in meetings just to sound like they know what they're talking about, but doesn't add any value to the discussion. Especially when higher level executives are involved.</li>
+      <li>
+        <p>An asshole is someone who <u>continuously</u> fails to meet their individual commitments and drags the whole team down.</p>
+        <small>Emphasis on the 'continusouly' part. Everyone makes mistakes, and that's pretty expected when you're working in the world of estimations.</small>
+      </li>
+    </ul>
+    <p>Assholes need to be terminated or re-allocated quickly. Quickly being the key point here. In the scope of agile, teams now fail or succeed together. So if you have an asshole who is not pulling their weight, your stronger
+      engineers are now working double-time trying to pick up the slack. While the asshole exists in the team, you're effectively punishing your strong engineers and rewarding your asshole engineers. If this persists, your strong
+      engineers <u>will burn out</u> and you will be left with nothing but a team of assholes. Your team will stink. <sup>(heh)</sup>
+    </p>
+    <p>So let that be part one of a manager's responsibilities.</p>
+    <p><strong>part two is motivation</strong></p>
+    <p>Particularly in transitioning teams, engineers are used to working in a very isolated, comfortable, mindset. But now they're responsible for stating what, and how much, they will be working on. 
+      How does a manager ensure teams both avoid committing to too much and committing to too little? Turns out there are 3 key things that the Microsoft team found to be drivers.
+    </p>
+    <ul>
+      <li><strong>Autonomy &amp; Alignment</strong></li>
+      <p>Autonomy refers to allowing the engineers to make decisions. Alignment refers to allowing engineers to make decisions within a particular framework aligned with the business or product goals.
+        Let's be clear - people need to make their own decisions. No one likes to be micro-managed, but we can't have twenty different logging libraries because people wanted to do different things. There
+        needs to be a defined balance and managers need to push teams to make the right choices. But the choices are ultimately up to the teams.
+      </p>
+      <li><strong>Mastery &amp; Vertical Teams</strong></li>
+      <p>At Microsoft, teams are encouraged to be vertical. Meaning, each engineer has the ability to completed all tasks from front-end design work through back-end database work.
+        This is very desirable in agile, as this allows teams and individuals to become less technologically siloed, but can prevent people from becoming masters at any one particular thing.
+        As it turns out, people like to learn and to improve. So there also needs to be a balance here as well.
+      </p>
+      <li><strong>Purpose</strong></li>
+      <p>
+        People need to feel an intrinsic purpose in what they're doing. Is what they are developing making a difference? Perhaps a difference in the world or even just a difference in the organization?
+        Does the goals of the product align with the morality of your engineers?
+      </p>
+      <p>Once upon a time there were 2 teams. Team 1 was highly funded, employing the greatest engineers, and providing the greatest perks. Team 2 had zero funds and employed volunteers. 
+        This is the story of Microsoft Encarta verses Wikipedia. Wikipedia won because the people working actually wanted to work and felt a strong sense
+        of purpose while doing so. Purpose is more important than money. But of course, people need to pay their bills.
+      </p>
+    </ul>
+    <p><strong>part three is environment</strong></p>
+    <p>What happens when things go wrong? For example if a team commits to 10 items in the sprint and finishes 9 of them, is the team considered a failure? Do we need to spend 2 hours in a retrospective meeting
+      talking about the missing piece and rehashing a stress-filled week?
+    </p>
+    <p>This seems to be a common mindset that managers have instilled in their teams, and <u>this is wrong</u>. This is extremely demoralizing and teams will start to give up on attempting to improve their workflows if this mindset 
+      is allowed to flourish, effectively making the teams non-agile.
+      Like I said above, some of the teams in Microsoft hardly ever hit 100% of their commitments, and as long
+      as they're communicating throughout the sprint about which items will push and which items need additional hands, a missed commit is not the end of the world. In fact, if the team realized two items, one higher priority
+      and one lesser priority, were taking much longer to complete than planned and decided to simply push the lower priority item out so they could add an extra hand to the higher priority item to complete it, that's a huge win.
+    </p>
+    <p>One big part that Microsoft mentioned is that they found that 2-week long sprints were simply not enough time required to realize that things would push or not, and even after realizing one item would, no one was
+      available to help anyway. They found that a 3-week sprint fixed that.
+    </p>
+
+    <h3>points to wrap up</h3>
+  </div>
+</div>

@@ -2,11 +2,6 @@
     font-size: 14px;
 }
 
-.header, .index {
-    font-variant: small-caps;
-    font-weight: bold;
-}
-
 .smallbox.link {
     border-radius: 5px;
     cursor: pointer;
