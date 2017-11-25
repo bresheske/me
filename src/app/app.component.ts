@@ -12,6 +12,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    
+    window['Reveal'].reveal('.row', 10);
   }
 }
