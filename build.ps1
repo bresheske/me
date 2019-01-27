@@ -5,5 +5,5 @@ git init
 git remote add origin https://github.com/bresheske/bresheske.github.io.git
 git add -A
 git stage *
-git commit -m "Web build"
+git commit -m "commit from build.ps1"
 git push --set-upstream origin master --force
