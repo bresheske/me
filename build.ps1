@@ -1,4 +1,4 @@
-ng build --prod
+npm run ng -- build --prod
 copy-item "dist\index.html" -destination "dist\404.html"
 set-location "dist"
 git init
