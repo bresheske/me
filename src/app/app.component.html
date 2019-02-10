@@ -186,7 +186,7 @@
           <em>All of my public projects are available on my <strong class="yellow-text lighten-2">
             <a href="https://github.com/bresheske" target="_blank">github profile</a>.</strong>
           </em>
-          <ul *ngIf="github">
+          <ul *ngIf="github" id="github-list">
             <li *ngFor="let repo of github">
               <strong class="yellow-text lighten-2"><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }} - </a></strong>
               {{ repo.description }}
