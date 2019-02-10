@@ -32,7 +32,9 @@ const exec = (cmd) => {
         () => { fs.createReadStream('dist/index.html').pipe(fs.createWriteStream('dist/404.html')); },
         () => { ui.writeInfoLine(`${symbols.success} Creating 404 File`); ui.stopProgress(); ui.startProgress('Deploying'); },
         () => exec(`cd dist && git add -A && git stage * && git commit -m "commit from deploy.js" && git push --set-upstream origin master --force`),
-        () => { ui.writeInfoLine(`${symbols.success} Deploying`); ui.stopProgress(); },
+        () => { ui.writeInfoLine(`${symbols.success} Deploying`); ui.stopProgress(); ui.startProgress('Executing Test Suite'); },
+        () => exec(`npm run test`),
+        () => { ui.writeInfoLine(`${symbols.success} Executing Test Suite`); ui.stopProgress(); },
     ];
     for (const step of steps) {
         await step();
