@@ -1,13 +1,13 @@
-const env = require('../env')['local'];
+const url = Cypress.env('url');
 
 describe(`site`, () => {
     it(`should display github profile`, () => {
-        cy.visit(env.url);
+        cy.visit(url);
         cy.contains(`github profile`)
             .should('have.attr', 'target', '_blank');
     });
     it(`should display github project list`, () => {
-        cy.visit(env.url);
+        cy.visit(url);
         cy.get(`#github-list`)
             .find('li')
             .should('be.length', 10);

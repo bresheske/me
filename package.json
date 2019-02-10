@@ -5,12 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
     "cy": "cypress open",
-    "dev": "concurrently \"npm run cy\" \"npm run start\""
+    "cy:run": "cypress run",
+    "test": "npm run cy:run -- --env url=bresheske.github.com",
+    "dev": "concurrently \"npm run cy -- --env url=localhost:4200\" \"npm run start\"",
+    "deploy": "powershell .\\build.ps1"
   },
   "private": true,
   "dependencies": {

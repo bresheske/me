@@ -1,8 +1,8 @@
-const env = require('../env')['local'];
+const url = Cypress.env('url');
 
 describe(`site`, () => {
     it(`should open`, () => {
-        cy.visit(env.url);
+        cy.visit(url);
         cy.contains(`brandon`);
     });
 });
