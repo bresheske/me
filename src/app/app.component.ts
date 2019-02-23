@@ -26,12 +26,6 @@ export class AppComponent {
     this.github = repos
       .filter(r => r.description && r.description.length > 0)
       .filter(r => r.name !== "bresheske.github.io" && r.name !=="me")
-      .sort((a, b) => {
-        const aDate = Date.parse(a.updated_at);
-        const bDate = Date.parse(b.updated_at);
-        return aDate > bDate ? -1
-          : aDate < bDate ? 1
-          : 0;
-      }).slice(0, 10);
+      .slice(0, 10);
   }
 }
