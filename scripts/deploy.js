@@ -10,12 +10,35 @@ const ui = new UI({
   ci: false
 });
 
-const exec = (cmd) => {
+const execFn = (name, fn) => {
+    ui.startProgress(name);
+    return new Promise(async (res) => {
+        try {
+            const result = fn();
+            if (result && result.then)
+                result = await result;
+
+            ui.stopProgress();
+            ui.writeInfoLine(`${symbols.success} ${name}`);
+            res(true);
+        }
+        catch (ex) {
+            ui.stopProgress();
+            ui.writeError(`${symbols.error} ${name}`);
+            res(false);
+        }
+    });
+}
+
+const exec = (name, cmd) => {
+    ui.startProgress(name);
     return new Promise((res) => {
         proc(cmd, (error, stdout, stderr) => {
-            if (error)
-                ui.writeError(error);
-            
+            ui.stopProgress();
+            const write = error
+                ? () => ui.writeWarnLine(`${symbols.error} ${name}`)
+                : () => ui.writeInfoLine(`${symbols.success} ${name}`);
+            write();
             res(!error);
         });
     });
@@ -24,20 +47,16 @@ const exec = (cmd) => {
 (async() => {
     const steps = [
         () => ui.writeInfoLine('Website Deployment'),
-        () => ui.startProgress('Building Website'),
-        () => exec(`npm run ng -- build --prod`),
-        () => { ui.writeInfoLine(`${symbols.success} Building Website`); ui.stopProgress(); ui.startProgress('Initializing Git'); },
-        () => exec(`cd dist && git init && git remote add origin https://github.com/bresheske/bresheske.github.io.git`),
-        () => { ui.writeInfoLine(`${symbols.success} Initializing Git`); ui.stopProgress(); ui.startProgress('Creating 404 File'); },
-        () => { fs.createReadStream('dist/index.html').pipe(fs.createWriteStream('dist/404.html')); },
-        () => { ui.writeInfoLine(`${symbols.success} Creating 404 File`); ui.stopProgress(); ui.startProgress('Deploying'); },
-        () => exec(`cd dist && git add -A && git stage * && git commit -m "commit from deploy.js" && git push --set-upstream origin master --force`),
-        () => { ui.writeInfoLine(`${symbols.success} Deploying`); ui.stopProgress(); ui.startProgress('Executing Test Suite'); },
-        () => exec(`npm run test`),
-        () => { ui.writeInfoLine(`${symbols.success} Executing Test Suite`); ui.stopProgress(); },
+        () => exec(`Building Website`, `npm run ng -- build --prod`),
+        () => exec(`Initializing Git`, `cd dist && git init && git remote add origin https://github.com/bresheske/bresheske.github.io.git`),
+        () => execFn(`Copying 404 File`, () => { fs.createReadStream('dist/index.html').pipe(fs.createWriteStream('dist/404.html')); }),
+        () => exec(`Deploying`, `cd dist && git add -A && git stage * && git commit -m "commit from deploy.js" && git push --set-upstream origin master --force`),
+        () => exec(`Executing Test Suite`, `npm run test`),
     ];
     for (const step of steps) {
-        await step();
+        const res = await step();
+        if (res === false)
+            break;
     }
 
 })();

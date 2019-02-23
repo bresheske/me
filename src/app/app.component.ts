@@ -21,11 +21,11 @@ export class AppComponent {
   }
 
   public async loadGithub() {
-    const repos: any[] = await this.http.get<any[]>('https://api.github.com/users/bresheske/repos')
+    const repos: any[] = await this.http.get<any[]>('https://api.github.com/users/bresheske/repos?sort=committer-date-desc')
       .toPromise();
     this.github = repos
       .filter(r => r.description && r.description.length > 0)
-      .filter(r => r.name != "bresheske.github.io" && r.name !="me")
+      .filter(r => r.name !== "bresheske.github.io" && r.name !=="me")
       .sort((a, b) => {
         const aDate = Date.parse(a.updated_at);
         const bDate = Date.parse(b.updated_at);
