@@ -4,6 +4,10 @@ body {
 
 @media print
 {    
+    body {
+        color: #222;
+    }
+
     .hide-on-print, .hide-on-print *
     {
         display: none !important;

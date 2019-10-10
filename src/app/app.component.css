@@ -2,9 +2,11 @@
     margin-bottom: 0;
 }
 
-.not-container > .row:nth-child(1) {
-    padding-top: 60px;
-    padding-bottom: 40px;
+@media screen { 
+    .not-container > .row:nth-child(1) {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }    
 }
 
 .not-container >.row {
