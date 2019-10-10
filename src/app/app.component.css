@@ -31,10 +31,16 @@ li {
     list-style-position: inside;
 }
 
-.education * {
+.education p {
     line-height: 1.4em;
-    margin: 0px !important;
-    padding: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
+}
+
+@media print {
+    .education .col {
+        margin-bottom: 10px;
+    }
 }
 
 .job:nth-child(1) {
