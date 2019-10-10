@@ -12,4 +12,15 @@ body {
     {
         display: none !important;
     }
+
+    .yellow-text {
+        color: #588bff !important;
+    }
+}
+
+@media screen {
+    .show-on-print, .show-on-print * {
+        display: none !important;
+    }
+
 }

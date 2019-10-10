@@ -65,3 +65,11 @@ img {
 a {
     color: inherit;
 }
+
+.print-view-header .right {
+    margin-right: 80px;
+}
+
+.print-view-header p > span {
+    margin-left: 20px;
+}
